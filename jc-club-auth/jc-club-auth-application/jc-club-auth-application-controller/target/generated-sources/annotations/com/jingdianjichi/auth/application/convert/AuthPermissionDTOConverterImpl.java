@@ -1,0 +1,34 @@
+package com.jingdianjichi.auth.application.convert;
+
+import com.jingdianjichi.auth.application.dto.AuthPermissionDTO;
+import com.jingdianjichi.auth.domain.entity.AuthPermissionBO;
+import javax.annotation.Generated;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2024-12-30T23:37:59+0800",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.41.0.v20241217-1506, environment: Java 17.0.13 (Eclipse Adoptium)"
+)
+public class AuthPermissionDTOConverterImpl implements AuthPermissionDTOConverter {
+
+    @Override
+    public AuthPermissionBO convertDTOToBO(AuthPermissionDTO authPermissionDTO) {
+        if ( authPermissionDTO == null ) {
+            return null;
+        }
+
+        AuthPermissionBO authPermissionBO = new AuthPermissionBO();
+
+        authPermissionBO.setIcon( authPermissionDTO.getIcon() );
+        authPermissionBO.setId( authPermissionDTO.getId() );
+        authPermissionBO.setMenuUrl( authPermissionDTO.getMenuUrl() );
+        authPermissionBO.setName( authPermissionDTO.getName() );
+        authPermissionBO.setParentId( authPermissionDTO.getParentId() );
+        authPermissionBO.setPermissionKey( authPermissionDTO.getPermissionKey() );
+        authPermissionBO.setShow( authPermissionDTO.getShow() );
+        authPermissionBO.setStatus( authPermissionDTO.getStatus() );
+        authPermissionBO.setType( authPermissionDTO.getType() );
+
+        return authPermissionBO;
+    }
+}
